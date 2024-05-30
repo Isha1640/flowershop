@@ -55,17 +55,25 @@
 
               <li class="nav-item nav-items">
               <?php
-              // $select_rows = mysqli_query($conn,"SELECT * FROM 'cart'") or die('query failed');
-              // $row_count = mysqli_num_rows($select_rows); 
+              $select_rows = mysqli_query($conn,"SELECT * FROM `cart`") or die('query failed');
+              $row_count = mysqli_num_rows($select_rows); 
               ?>
-              <!-- <a href="cart.php" class="cart">cart <span><?php echo $row_count; ?></span> </a>
-              <div id="menu-btn" class="fas fa-bars"></div> -->
+               <a href="cart.php" class="cart">cart <span><?php echo $row_count; ?></span> </a>
+               <!-- <div id="menu-btn" class="fas fa-cart"></div>  -->
               </li>
  
               
-        
               <li class="nav-item nav-items">
-                <a class="nav-link nav-links" href="<?php echo SITEURL;?>login.php">LOG IN</a>
+                <!-- dropdown activity -->
+                <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Activity
+            </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="<?php echo SITEURL;?>login.php">LOG IN</a></li>
+                <li><a class="dropdown-item" href="<?php echo SITEURL;?>register.php">SIGN UP</a></li>
+              </ul>
+          </div>
               </li>
 
             </ul>

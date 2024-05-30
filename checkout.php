@@ -131,7 +131,7 @@ if(isset($_POST['order_btn'])){
             <input type="text" placeholder="e.g. 123456" name="pin_code" required>
          </div>
       </div>
-      <input type="submit" value="Confirm Order" name="order_btn" class="btn-primary">
+      <input type="submit" value="Confirm Order" name="order_btn" class="btn p-3 fs-4 btn-primary">
    </form>
 
 </section>

@@ -28,7 +28,7 @@
 
 
     <!-- Product sEARCH Section Starts Here -->
-    <section class="food-search text-center">
+    <section class="product-search text-center">
         <div class="container">
             
             <h2>products on <a href="#" class="text-white">"<?php echo $category_title; ?>"</a></h2>
@@ -80,7 +80,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/product/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <img src="<?php echo SITEURL; ?>images/products/<?php echo $image_name; ?>" alt="flower arrangement" class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
@@ -89,7 +89,7 @@
 
                             <div class="product-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="product-price">$<?php echo $price; ?></p>
+                                <p class="product-price">Rs<?php echo $price; ?></p>
                                 <p class="product-detail">
                                     <?php echo $description; ?>
                                 </p>

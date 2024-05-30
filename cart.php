@@ -69,6 +69,11 @@ if(isset($_GET['delete_all'])){
       </tr>
 
       <?php
+      // var_dump($grand_total);
+      // var_dump($sub_total);
+      $sub_total = intval($sub_total);
+      // var_dump($sub_total);
+
         $grand_total += $sub_total;  
          };
        };
@@ -85,7 +90,7 @@ if(isset($_GET['delete_all'])){
 </table>
 
 <div class="checkout-btn">
-   <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">procced to checkout</a>
+   <a href="checkout.php" class="btn btn-primary btn-lg fs-3<?= ($grand_total > 1)?'':'disabled'; ?>">procced to checkout</a>
 </div>
 
         </section>

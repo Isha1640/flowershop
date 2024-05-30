@@ -1,3 +1,6 @@
+:root {
+   --black: #000;
+}
 
 *{
     margin: 0 0;
@@ -10,6 +13,7 @@ html{
     overflow-x: hidden;
  }
  
+
  .container{
     max-width: 1200px;
     margin:0 auto;
@@ -24,7 +28,7 @@ html{
     text-align: center;
     font-size: 3.5rem;
     text-transform: uppercase;
-    color:var(--black);
+    color:black;
     margin-bottom: 2rem;
  }
 
@@ -511,14 +515,14 @@ footer{
  .display-product-table table thead th{
     padding:1.5rem;
     font-size: 2rem;
-    background-color: var(--black);
-    color:var(--white);
+    background-color: black;
+    color:white;
  }
  
  .display-product-table table td{
     padding:1.5rem;
     font-size: 2rem;
-    color:var(--black);
+    color:black;
  }
  
  .display-product-table table td:first-child{
@@ -526,14 +530,14 @@ footer{
  }
  
  .display-product-table table tr:nth-child(even){
-    background-color: var(--bg-color);
+    background-color: #ddd;
  }
  
  .display-product-table .empty{
     margin-bottom: 2rem;
     text-align: center;
-    background-color: var(--bg-color);
-    color:var(--black);
+    background-color: #ddd;
+    color:black;
     font-size: 2rem;
     padding:1.5rem;
  }
@@ -542,7 +546,7 @@ footer{
     position: fixed;
     top:0; left:0;
     z-index: 1100;
-    background-color: var(--dark-bg);
+    background-color: rgba(0,0,0,0.75);
     padding:2rem;
     display: none;
     align-items: center;
@@ -554,17 +558,17 @@ footer{
  .edit-form-container form{
     width: 50rem;
     border-radius: .5rem;
-    background-color: var(--white);
+    background-color: white;
     text-align: center;
     padding:2rem;
  }
 .edit-form-container form .box{
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: #c7c3c3;
     border-radius: .5rem;
     margin:1rem 0;
     font-size: 1.7rem;
-    color:var(--black);
+    color:black;
     padding:1.2rem 1.4rem;
     text-transform: none;
  }
@@ -591,12 +595,12 @@ footer{
  .products .box-container .box h3{
     margin:1rem 0;
     font-size: 2.5rem;
-    color:var(--black);
+    color:black;
  }
  
  .products .box-container .box .price{
     font-size: 2.5rem;
-    color:var(--black);
+    color:black;
  }
 
 
@@ -609,22 +613,22 @@ footer{
  .shopping-cart table thead th{
     padding:1.5rem;
     font-size: 2rem;
-    color:var(--white);
-    background-color: var(--black);
+    color:white;
+    background-color: black;
  }
  
  .shopping-cart table tr td{
-    border-bottom: var(--border);
+    border-bottom: #212934;
     padding:1.5rem;
     font-size: 2rem;
-    color:var(--black);
+    color:black;
  }
  
  .shopping-cart table input[type="number"]{
     border: var(--border);
     padding:1rem 2rem;
     font-size: 2rem;
-    color:var(--black);
+    color:black;
     width: 10rem;
  }
  
@@ -632,16 +636,17 @@ footer{
     padding:.5rem 1.5rem;
     cursor: pointer;
     font-size: 2rem;
-    background-color: var(--orange);
-    color:var(--white);
+    background-color: orange;
+    color:white;
  }
  
 .shopping-cart table input[type="submit"]:hover{
-    background-color: var(--black);
+    background-color: black;
+    color: white;
  }
  
 .shopping-cart table .table-bottom{
-    background-color: var(--bg-color);
+    background-color: #c7c3c3;
  }
  
 .shopping-cart .checkout-btn{
@@ -658,7 +663,7 @@ footer{
     pointer-events: none;
     opacity: .5;
     user-select: none;
-    background-color: var(--red);
+    background-color: red;
  }
 
 
@@ -688,7 +693,7 @@ footer{
     text-align: center;
     font-size: 3.5rem;
     text-transform: uppercase;
-    color:var(--black);
+    color:black;
     margin-bottom: 2rem;
  }
 
@@ -714,7 +719,7 @@ footer{
    width: 100%;
    text-align: center;
    background-color: var(--blue);
-   color:var(--white);
+   color:white;
    font-size: 1.7rem;
    padding:1.2rem 3rem;
    border-radius: .5rem;
@@ -724,7 +729,8 @@ footer{
 
 
 .delete-btn:hover{
-   background-color: var(--black);
+   background-color: black;
+   color: white;
 }
 
 
@@ -733,12 +739,13 @@ footer{
 }
 
 .delete-btn{
-   background-color: var(--orange);
+   background-color: orange;
 }
 
 .delete-btn{
    margin-top: 0;
-   background-color: var(--red);
+   background-color: red;
+   color: white;
 }
 
 .option-btn{
@@ -746,7 +753,7 @@ footer{
     width: 100%;
     text-align: center;
     background-color: var(--blue);
-    color:var(--white);
+    color:white;
     font-size: 1.7rem;
     padding:1.2rem 3rem;
     border-radius: .5rem;
@@ -756,7 +763,7 @@ footer{
  
  
 .option-btn:hover{
-    background-color: var(--black);
+    background-color: black;
  }
  
  
@@ -765,19 +772,19 @@ footer{
  }
  
 .delete-btn{
-    background-color: var(--orange);
+    background-color: orange;
  }
  
  .delete-btn{
     margin-top: 0;
-    background-color: var(--red);
+    background-color: red;
  }
 
 /* order css */
 .checkout-form form{
     padding:2rem;
     border-radius: .5rem;
-    background-color: var(--bg-color);
+    background-color: #c7c3c3;
  }
  
  .checkout-form form .flex{
@@ -792,15 +799,15 @@ footer{
  
  .checkout-form form .flex .inputBox span{
     font-size: 2rem;
-    color:var(--black);
+    color:black;
  }
  
  .checkout-form form .flex .inputBox input,
  .checkout-form form .flex .inputBox select{
     width: 100%;
-    background-color: var(--white);
+    background-color: white;
     font-size: 1.7rem;
-    color:var(--black);
+    color:black;
     border-radius: .5rem;
     margin:1rem 0;
     padding:1.2rem 1.4rem;
@@ -810,7 +817,7 @@ footer{
  
  .display-order{
     max-width: 50rem;
-    background-color: var(--white);
+    background-color: white;
     border-radius: .5rem;
     text-align: center;
     padding:1.5rem;
@@ -823,17 +830,17 @@ footer{
  .display-order span{
     display: inline-block;
     border-radius: .5rem;
-    background-color: var(--bg-color);
+    background-color: #c7c3c3;
     padding:.5rem 1.5rem;
     font-size: 2rem;
-    color:var(--black);
+    color:black;
     margin:.5rem;
  }
  
  .display-order span.grand-total{
     width: 100%;
-    background-color: var(--red);
-    color:var(--white);
+    background-color: red;
+    color:white;
     padding:1rem;
     margin-top: 1rem;
  }
@@ -849,7 +856,7 @@ footer{
     align-items: center;
     justify-content: center;
     z-index: 1100;
-    background-color: var(--dark-bg);
+    background-color: rgba(0,0,0,0.75);
     width: 100%;
  }
  
@@ -858,7 +865,7 @@ footer{
  }
  
  .order-message-container::-webkit-scrollbar-track{
-    background-color: var(--dark-bg);
+    background-color: rgba(0,0,0,0.75);
  }
  
  .order-message-container::-webkit-scrollbar-thumb{
@@ -867,7 +874,7 @@ footer{
  
  .order-message-container .message-container{
     width: 50rem;
-    background-color: var(--white);
+    background-color: white;
     border-radius: .5rem;
     padding:2rem;
     text-align: center;
@@ -875,20 +882,20 @@ footer{
  
  .order-message-container .message-container h3{
     font-size: 2.5rem;
-    color:var(--black);
+    color:black;
  }
  
  .order-message-container .message-container .order-detail{
-    background-color: var(--bg-color);
+    background-color: #c7c3c3;
     border-radius: .5rem;
     padding:1rem;
     margin:1rem 0;
  }
  
  .order-message-container .message-container .order-detail span{
-    background-color: var(--white);
+    background-color: white;
     border-radius: .5rem;
-    color:var(--black);
+    color:black;
     font-size: 2rem;
     display: inline-block;
     padding:1rem 1.5rem;
@@ -897,8 +904,8 @@ footer{
  
  .order-message-container .message-container .order-detail span.total{
     display: block;
-    background: var(--red);
-    color:var(--white);
+    background: red;
+    color:white;
  }
  
  .order-message-container .message-container .customer-details{
@@ -908,7 +915,7 @@ footer{
  .order-message-container .message-container .customer-details p{
     padding:1rem 0;
     font-size: 2rem;
-    color:var(--black);
+    color:black;
  }
  
  .order-message-container .message-container .customer-details p span{
@@ -917,6 +924,62 @@ footer{
     text-transform: none;
  }
  
+ /* login form */
+.login-box{
+   background-color: #eee;
+   border-radius: 20px;
+   padding:2rem;
+}
+.login-box p{
+   text-align: center;
+    margin-top: 0.5rem;
+  
+}
+.login-box p a{
+   color: #F6838A;
+ 
+   
+}
+.form-control{
+   border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(247, 166, 166);
+    color: #080101;
+    background: #F3F3F3;
+    border: none;
+    outline: none;
+}
+.btnlog{
+ 
+  display: inline-block;
+  margin-left: 95px;
+  margin-top: 8px;
+  padding: 5px 55px 5px 55px;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  color: #F6838A; 
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #F6838A;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #F6838A;
+
+}
+.btnlog:hover
+{
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  .btnlog:active {
+    transform: scale(0.9);
+  } 
+  .form-container h1{
+   color: #F6838A;
+  }
+/* login css ends */
+
  
  
  
