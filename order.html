@@ -65,7 +65,7 @@ if(isset($_POST['submit']))
     //Save the Order in Databaase
     //Create SQL to save the data
     $sql2 = "INSERT INTO tbl_order SET 
-        food = '$product',
+        product = '$product',
         price = $price,
         qty = $qty,
         total = $total,

@@ -23,7 +23,7 @@
                     <li><a href="manage-category.php">Category</a></li>
                     <li><a href="manage-product.php">Products</a></li>
                     <li><a href="manage-order.php">Orders</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="logout.php">Activity</a></li>
                 </ul>
             </div>
         </div>

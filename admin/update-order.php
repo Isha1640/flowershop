@@ -16,7 +16,7 @@
 
                 //Get all other details based on this id
                 //SQL Query to get the order details
-                $sql = "SELECT * FROM tbl_order WHERE id=$id";
+                $sql = "SELECT * FROM orders_tbl WHERE id=$id";
                 //Execute Query
                 $res = mysqli_query($conn, $sql);
                 //Count Rows
@@ -27,14 +27,20 @@
                     //Detail Availble
                     $row=mysqli_fetch_assoc($res);
 
-                    $product = $row['product'];
-                    $price = $row['price'];
-                    $qty = $row['qty'];
-                    $status = $row['status'];
-                    $customer_name = $row['customer_name'];
-                    $customer_contact = $row['customer_contact'];
-                    $customer_email = $row['customer_email'];
-                    $customer_address= $row['customer_address'];
+                    $customer_name = $row['name'];
+                    $customer_number = $row['number'];
+                    $customer_mail = $row['email'];
+                    $method = $row['method'];
+                    $flat = $row['flat'];
+                    $street = $row['street'];
+                    $city = $row ['city'];
+                    $state = $row ['state'];
+                    $country= $row['country'];
+                    $pin_code= $row['pin_code'];
+                    $total_products= $row['total_products'];
+                    $total_price= $row['total_price'];
+
+                    
                 }
                 else
                 {
@@ -55,26 +61,58 @@
         
             <table class="tbl-30">
                 <tr>
-                    <td>Product Title</td>
-                    <td><b> <?php echo $product; ?> </b></td>
+                    <td>Customer Name:</td>
+                    <td><b> <?php echo $customer_name; ?> </b></td>
                 </tr>
 
                 <tr>
-                    <td>Price</td>
+                    <td>Customer Number:</td>
+                    <td><b> <?php echo $customer_number; ?> </b></td>
+                </tr>
+
+                <tr>
+                    <td>Customer Mail:</td>
+                    <td><b> <?php echo $customer_mail; ?> </b></td>
+                </tr>
+
+                <tr>
+                    <td>Pay method:</td>
+                    <td><b> <?php echo $method; ?> </b></td>
+                </tr>
+
+                
+                <tr>
+                    <td>Flat</td>
+                    <td><b> <?php echo $flat; ?> </b></td>
+                </tr>
+                <tr>
+                    <td>Street</td>
+                    <td><b> <?php echo $street; ?> </b></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><b> <?php echo $city; ?> </b></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><b> <?php echo $state; ?> </b></td>
+                </tr>
+                <tr>
+                    <td>Number of products</td>
+                    <td><b> <?php echo  $total_products; ?> </b></td>
+                </tr>
+
+
+                <tr>
+                    <td>Total Price:</td>
                     <td>
-                        <b> $ <?php echo $price; ?></b>
+                        <b> $ <?php echo  $total_price; ?></b>
                     </td>
                 </tr>
 
-                <tr>
-                    <td>Qty</td>
-                    <td>
-                        <input type="number" name="qty" value="<?php echo $qty; ?>">
-                    </td>
-                </tr>
 
                 <tr>
-                    <td>Status</td>
+                    <!-- <td>Status</td> -->
                     <td>
                         <select name="status">
                             <option <?php if($status=="Ordered"){echo "selected";} ?> value="Ordered">Ordered</option>
@@ -95,21 +133,14 @@
                 <tr>
                     <td>Customer Contact: </td>
                     <td>
-                        <input type="text" name="customer_contact" value="<?php echo $customer_contact; ?>">
+                        <input type="text" name="customer_contact" value="<?php echo $customer_number; ?>">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Customer Email: </td>
                     <td>
-                        <input type="text" name="customer_email" value="<?php echo $customer_email; ?>">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Address: </td>
-                    <td>
-                        <textarea name="customer_address" cols="30" rows="5"><?php echo $customer_address; ?></textarea>
+                        <input type="text" name="customer_email" value="<?php echo   $customer_mail; ?>">
                     </td>
                 </tr>
 
@@ -132,28 +163,22 @@
             {
                 //echo "Clicked";
                 //Get All the Values from Form
-                $id = $_POST['id'];
-                $price = $_POST['price'];
-                $qty = $_POST['qty'];
-
-                $total = $price * $qty;
-
+            
                 $status = $_POST['status'];
 
                 $customer_name = $_POST['customer_name'];
-                $customer_contact = $_POST['customer_contact'];
-                $customer_email = $_POST['customer_email'];
+                $customer_number = $_POST['customer_contact'];
+                $customer_mail = $_POST['customer_email'];
                 $customer_address = $_POST['customer_address'];
 
                 //Update the Values
-                $sql2 = "UPDATE tbl_order SET 
-                    qty = $qty,
-                    total = $total,
+                $sql2 = "UPDATE orders_tbl SET 
+                -- from here isha
+                   
                     status = '$status',
                     customer_name = '$customer_name',
-                    customer_contact = '$customer_contact',
-                    customer_email = '$customer_email',
-                    customer_address = '$customer_address'
+                    customer_contact = '$customer_number',
+                    customer_email = '$customer_mail',
                     WHERE id=$id
                 ";
 

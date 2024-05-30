@@ -18,22 +18,24 @@
                 <table class="tbl-full">
                     <tr>
                         <th>S.N.</th>
-                        <th>Food</th>
-                        <th>Price</th>
-                        <th>Qty.</th>
-                        <th>Total</th>
-                        <th>Order Date</th>
-                        <th>Status</th>
-                        <th>Customer Name</th>
-                        <th>Contact</th>
-                        <th>Email</th>
-                        <th>Address</th>
+                        <th>Customer_Name</th>
+                        <th>Customer_Number</th>
+                        <th>Mail_Address</th>
+                        <th>Method</th>
+                        <th>Flat</th>
+                        <th>Street</th>
+                        <th>City</th> 
+                        <th>Province</th>
+                        <th>Country</th>
+                        <th>Pin_code</th>
+                        <th>Total_Product</th>
+                        <th>Total_Price</th>
                         <th>Actions</th>
                     </tr>
 
                     <?php 
                         //Get all the orders from database
-                        $sql = "SELECT * FROM tbl_order ORDER BY id DESC"; // DIsplay the Latest Order at First
+                        $sql = "SELECT * FROM `orders_tbl` ORDER BY id DESC"; // Display the Latest Order at First
                         //Execute Query
                         $res = mysqli_query($conn, $sql);
                         //Count the Rows
@@ -48,56 +50,61 @@
                             {
                                 //Get all the order details
                                 $id = $row['id'];
-                                $food = $row['food'];
-                                $price = $row['price'];
-                                $qty = $row['qty'];
-                                $total = $row['total'];
-                                $order_date = $row['order_date'];
-                                $status = $row['status'];
-                                $customer_name = $row['customer_name'];
-                                $customer_contact = $row['customer_contact'];
-                                $customer_email = $row['customer_email'];
-                                $customer_address = $row['customer_address'];
+                                $customer_name = $row['name'];
+                                $customer_number = $row['number'];
+                                $email = $row['email'];
+                                $method = $row['method'];
+                                $flat = $row['flat'];
+                                $street = $row['street'];
+                                $city = $row['city'];
+                                $state = $row['state'];
+                                $country = $row['country'];
+                                $total_products = $row['total_products'];
+                                $total_price = $row['total_price'];
+
                                 
                                 ?>
 
                                     <tr>
                                         <td><?php echo $sn++; ?>. </td>
-                                        <td><?php echo $food; ?></td>
-                                        <td><?php echo $price; ?></td>
-                                        <td><?php echo $qty; ?></td>
-                                        <td><?php echo $total; ?></td>
-                                        <td><?php echo $order_date; ?></td>
+                                        <td><?php echo $customer_name; ?></td>
+                                        <td><?php echo $customer_number; ?></td>
+                                        <td><?php echo $email; ?></td>
+                                        <td><?php echo $method;?></td>
+                                        <td><?php echo $flat; ?></td>
+                                        <td><?php echo $street; ?></td>
+                                        <td><?php echo $city; ?></td>
+                                        <td><?php echo $state; ?></td>
+                                        <td><?php echo $country; ?></td>
+                                        <td><?php echo $total_products; ?></td>
+                                        <td><?php echo $total_price; ?></td>
+
 
                                         <td>
                                             <?php 
                                                 // Ordered, On Delivery, Delivered, Cancelled
 
-                                                if($status=="Ordered")
-                                                {
-                                                    echo "<label>$status</label>";
-                                                }
-                                                elseif($status=="On Delivery")
-                                                {
-                                                    echo "<label style='color: orange;'>$status</label>";
-                                                }
-                                                elseif($status=="Delivered")
-                                                {
-                                                    echo "<label style='color: green;'>$status</label>";
-                                                }
-                                                elseif($status=="Cancelled")
-                                                {
-                                                    echo "<label style='color: red;'>$status</label>";
-                                                }
+                                                // if($status=="Ordered")
+                                                // {
+                                                //     echo "<label>$status</label>";
+                                                // }
+                                                // elseif($status=="On Delivery")
+                                                // {
+                                                //     echo "<label style='color: orange;'>$status</label>";
+                                                // }
+                                                // elseif($status=="Delivered")
+                                                // {
+                                                //     echo "<label style='color: green;'>$status</label>";
+                                                // }
+                                                // elseif($status=="Cancelled")
+                                                // {
+                                                //     echo "<label style='color: red;'>$status</label>";
+                                                // }
                                             ?>
                                         </td>
 
-                                        <td><?php echo $customer_name; ?></td>
-                                        <td><?php echo $customer_contact; ?></td>
-                                        <td><?php echo $customer_email; ?></td>
-                                        <td><?php echo $customer_address; ?></td>
                                         <td>
-                                            <a href="<?php echo SITEURL; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Update Order</a>
+                                            <a href="<?php echo SITEURL; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Edit Order</a>
                                         </td>
                                     </tr>
 

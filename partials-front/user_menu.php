@@ -37,18 +37,32 @@
 
 
 
-            <div class="midmenu">  
+            <div class="midmenu">
+              
+            
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">                         
               <li class="nav-item nav-items">
                   <a class="nav-link nav-links" href="<?php echo SITEURL;?>index.php">HOME</a>
               </li>
+
               <li class="nav-item nav-items">
                 <a class="nav-link nav-links" href="<?php echo SITEURL; ?>products.php">CATALOGUE</a>
               </li>
 
               <li class="nav-item nav-items">
-                <a class="nav-link nav-links" href="<?php echo SITEURL;?>order.php">CART</a>
+                <a class="nav-link nav-links" href="<?php echo SITEURL;?>catagories.php">CATEGORIES</a>
               </li>
+
+              <li class="nav-item nav-items">
+              <?php
+              // $select_rows = mysqli_query($conn,"SELECT * FROM 'cart'") or die('query failed');
+              // $row_count = mysqli_num_rows($select_rows); 
+              ?>
+              <!-- <a href="cart.php" class="cart">cart <span><?php echo $row_count; ?></span> </a>
+              <div id="menu-btn" class="fas fa-bars"></div> -->
+              </li>
+ 
+              
         
               <li class="nav-item nav-items">
                 <a class="nav-link nav-links" href="<?php echo SITEURL;?>login.php">LOG IN</a>
